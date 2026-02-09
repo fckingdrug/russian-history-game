@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://co5vonqnduxnu"]
+
+[ext_resource type="Script" uid="uid://cdkr2m3fe0gxa" path="res://scene/crafting_window.gd" id="1_o3ihl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3ihl"]
+bg_color = Color(0.45882353, 0.61960787, 0.7607843, 0.37254903)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.53668624, 0.868505, 0.86614156, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="CraftingWindow" type="CanvasLayer" groups=["crafting_window"]]
+layer = 100
+script = ExtResource("1_o3ihl")
+
+[node name="MainPanel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -250.0
+offset_right = 366.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MainPanel"]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 3.0
+offset_right = 567.0
+offset_bottom = 503.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o3ihl")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/Panel"]
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 251.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MainPanel/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "КРАФТ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainPanel/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RecipesContainer" type="VBoxContainer" parent="MainPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="MaterialsLabel" type="Label" parent="MainPanel/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+text = "Выберите рецепт"
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CraftButton" type="Button" parent="MainPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Скрафтить"
+
+[node name="CloseButton" type="Button" parent="MainPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Закрыть"
+
+[node name="Control" type="Control" parent="MainPanel/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2

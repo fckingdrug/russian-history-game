@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://bd01b65rc2qnx"]
+
+[ext_resource type="Script" uid="uid://clj4bsuilmqeq" path="res://BuilderWorkbench.gd" id="1_b5y7w"]
+[ext_resource type="Texture2D" uid="uid://bv6jjx86tnfl0" path="res://assets/items/builder_workbench_icon.png" id="1_bagne"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_frxkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5y7w"]
+size = Vector2(34, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frxkb"]
+size = Vector2(8.4330845, 10.653685)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4oj3"]
+size = Vector2(24, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwpk3"]
+size = Vector2(35, 8)
+
+[node name="builder_workbench" type="StaticBody2D"]
+script = ExtResource("1_b5y7w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bagne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 25.5)
+shape = SubResource("RectangleShape2D_b5y7w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5, 23.5)
+rotation = 1.2700948
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_frxkb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5, 23.5)
+rotation = 1.2700948
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_frxkb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 21)
+shape = SubResource("RectangleShape2D_i4oj3")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(13, 23)
+rotation = 1.2700948
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_frxkb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(14, 23.000002)
+rotation = 1.2700948
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_frxkb")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 21)
+shape = SubResource("RectangleShape2D_jwpk3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -145.0
+offset_top = -41.0
+offset_right = 143.0
+offset_bottom = -18.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_frxkb")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы открыть строительный крафт"

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1m6ay7v8sdat"]
+
+[ext_resource type="Script" uid="uid://bnlrxrccmujxb" path="res://CoalDeposit.gd" id="1_1jcv6"]
+[ext_resource type="Texture2D" uid="uid://bxsvuydmnbva1" path="res://Coal_ore.png" id="1_7o08x"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_v8koi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jcv6"]
+size = Vector2(35.59504, 11.135572)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8koi"]
+size = Vector2(35.190964, 10.614288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yd5w"]
+size = Vector2(52, 11)
+
+[node name="CoalDeposit" type="StaticBody2D"]
+script = ExtResource("1_1jcv6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7o08x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(14.354059, 12.284316)
+rotation = -0.31844208
+shape = SubResource("RectangleShape2D_1jcv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 15)
+rotation = 0.20515671
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_v8koi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6)
+shape = SubResource("RectangleShape2D_5yd5w")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -42.0
+offset_right = 61.0
+offset_bottom = -19.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_v8koi")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы добыть"

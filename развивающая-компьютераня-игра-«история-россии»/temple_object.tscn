@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddfsutautvdg6"]
+
+[ext_resource type="Texture2D" uid="uid://cfp8eprm8783f" path="res://assets/buildings/temple.png" id="1_f6wxb"]
+[ext_resource type="Script" uid="uid://cm82uvhov7qec" path="res://Temple.gd" id="1_tyul5"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_5eelm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eyw8"]
+size = Vector2(82.25, 32.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyul5"]
+size = Vector2(32, 29)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tyul5"]
+
+[node name="Temple" type="StaticBody2D"]
+script = ExtResource("1_tyul5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6wxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12, 32.3125)
+shape = SubResource("RectangleShape2D_5eyw8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(34, 34.5)
+shape = SubResource("RectangleShape2D_tyul5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(25, 31)
+shape = SubResource("CapsuleShape2D_tyul5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -104.0
+offset_top = -47.0
+offset_right = 88.0
+offset_bottom = -24.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_5eelm")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы освятить икону"

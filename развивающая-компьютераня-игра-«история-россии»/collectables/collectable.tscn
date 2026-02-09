@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7fh7rftqh3u7"]
+
+[ext_resource type="Script" uid="uid://crse2nb312dxf" path="res://stick_collectable.gd" id="1_ckvre"]
+[ext_resource type="Texture2D" uid="uid://su6miorn2w54" path="res://assets/items/stick.png" id="2_ckvre"]
+[ext_resource type="Resource" uid="uid://b6ooop7wg1lb2" path="res://inventory/items/stick.tres" id="2_mimh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mimh1"]
+size = Vector2(5, 9.5)
+
+[node name="stick" type="StaticBody2D"]
+position = Vector2(0, -4)
+collision_layer = 2
+script = ExtResource("1_ckvre")
+item = ExtResource("2_mimh1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, 6.0000005)
+scale = Vector2(0.3515741, 0.32038793)
+texture = ExtResource("2_ckvre")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -53.0
+offset_top = -35.0
+offset_right = 43.0
+offset_bottom = -18.0
+theme_override_font_sizes/font_size = 12
+text = "\"E\" чтобы взять"
+
+[node name="interactive_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactive_area"]
+position = Vector2(-5.5, 6.25)
+shape = SubResource("RectangleShape2D_mimh1")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwwq6wmkdikaj"]
+
+[ext_resource type="Script" uid="uid://b4dbkql71411a" path="res://EraGoalDisplay.gd" id="1_ph5ca"]
+
+[node name="EraGoalDisplay" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ph5ca")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 2758.0
+offset_top = 596.0
+offset_right = 2798.0
+offset_bottom = 618.0
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfip53qv5616d"]
+
+[ext_resource type="Script" uid="uid://crse2nb312dxf" path="res://stick_collectable.gd" id="1_f5yaw"]
+[ext_resource type="Texture2D" uid="uid://dy2wb2onvvnt" path="res://stick.png" id="3_775jo"]
+
+[node name="stick_collectable" type="StaticBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_f5yaw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.3360002, 1.5499996)
+scale = Vector2(0.64599997, 0.47187498)
+texture = ExtResource("3_775jo")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch16nldb3secm"]
+
+[ext_resource type="Script" uid="uid://d30a347a2rl61" path="res://FurnaceObject.gd" id="1_n2h56"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="2_3aq8k"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3aq8k"]
+load_path = "res://.godot/imported/Flattening_furnance.png-4585c7ef70f19f3228d31f4d4e88abb5.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3aq8k"]
+size = Vector2(48, 8)
+
+[node name="FurnaceObject" type="StaticBody2D"]
+script = ExtResource("1_n2h56")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_3aq8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 20)
+shape = SubResource("RectangleShape2D_3aq8k")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -80.0
+offset_top = -55.0
+offset_right = 88.0
+offset_bottom = -32.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_3aq8k")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы переплавить"

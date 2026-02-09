@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfpmx3q6iqns2"]
+
+[ext_resource type="Script" uid="uid://dxbctox0kk33j" path="res://Podvorye.gd" id="1_leksg"]
+[ext_resource type="Texture2D" uid="uid://c1g2phdilmgar" path="res://scene/compound.png" id="2_2rgjy"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_2rgjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehbw4"]
+size = Vector2(85.5, 30.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dce5"]
+size = Vector2(71, 36)
+
+[node name="podvorye" type="StaticBody2D"]
+script = ExtResource("1_leksg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2rgjy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.75, 28.25)
+shape = SubResource("RectangleShape2D_ehbw4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 32)
+shape = SubResource("RectangleShape2D_0dce5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -130.0
+offset_top = -41.0
+offset_right = 118.0
+offset_bottom = -18.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_2rgjy")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы назначить митрополита"

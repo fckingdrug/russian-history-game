@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl3cw0iylaxq0"]
+
+[ext_resource type="Script" uid="uid://dsmne4y8a08jh" path="res://Golden_ore.gd" id="1_8uu3u"]
+[ext_resource type="Texture2D" uid="uid://cii46fk0b7uxb" path="res://Golden_ore.png" id="2_ua4nc"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_ua4nc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uu3u"]
+size = Vector2(29.994568, 10.898455)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ua4nc"]
+size = Vector2(34.784866, 11.250657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uj8b"]
+size = Vector2(52, 11)
+
+[node name="GoldOreDeposit" type="StaticBody2D"]
+script = ExtResource("1_8uu3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ua4nc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12.572654, 14.6097975)
+rotation = 0.20515671
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_8uu3u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(14.756797, 12.212137)
+rotation = -0.31844208
+shape = SubResource("RectangleShape2D_ua4nc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6)
+shape = SubResource("RectangleShape2D_4uj8b")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -42.0
+offset_right = 61.0
+offset_bottom = -19.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_ua4nc")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы добыть"

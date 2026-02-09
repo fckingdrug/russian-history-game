@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg4y4whilhbrv"]
+
+[ext_resource type="Script" uid="uid://dedaolpf0o3qo" path="res://script/tree.gd" id="1_dcgk5"]
+[ext_resource type="Texture2D" uid="uid://ccbdctpgulldd" path="res://assets/sprites/Oak_Tree.png" id="2_lutej"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_214j1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lutej"]
+size = Vector2(10, 10)
+
+[node name="Tree" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_dcgk5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lutej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_lutej")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -66.0
+offset_top = -47.0
+offset_right = 70.0
+offset_bottom = -24.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_214j1")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы срубить"

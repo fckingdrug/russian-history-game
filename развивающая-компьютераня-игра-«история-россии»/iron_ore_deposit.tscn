@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cknyevgvc2gl1"]
+
+[ext_resource type="Texture2D" uid="uid://d2gcu4nleed26" path="res://Iron_ore.png" id="1_achi5"]
+[ext_resource type="Script" uid="uid://bj2ere0tl01xn" path="res://IronOreDeposit.gd" id="1_pnuiu"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_cxjam"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnuiu"]
+size = Vector2(35.59504, 11.135572)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxjam"]
+size = Vector2(52, 11)
+
+[node name="IronOreDeposit" type="StaticBody2D"]
+script = ExtResource("1_pnuiu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_achi5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, 15)
+shape = SubResource("RectangleShape2D_pnuiu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(14, 10.999999)
+rotation = -0.31844208
+shape = SubResource("RectangleShape2D_pnuiu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6)
+shape = SubResource("RectangleShape2D_cxjam")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -42.0
+offset_right = 61.0
+offset_bottom = -19.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_cxjam")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы добыть"

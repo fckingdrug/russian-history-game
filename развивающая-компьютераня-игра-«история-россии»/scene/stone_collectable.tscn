@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds7qolyuryjk1"]
+
+[ext_resource type="Script" uid="uid://crse2nb312dxf" path="res://stick_collectable.gd" id="1_0wk3a"]
+[ext_resource type="Texture2D" uid="uid://bsgh8bfaar17" path="res://stone.png" id="3_0wk3a"]
+
+[node name="stone_collectable" type="StaticBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_0wk3a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.28125, 0.3125)
+texture = ExtResource("3_0wk3a")

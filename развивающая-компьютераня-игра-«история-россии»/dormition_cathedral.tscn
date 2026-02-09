@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://du75hjmn6w4af"]
+
+[ext_resource type="Script" uid="uid://c0omc7y1r5r8k" path="res://DormitionCathedral.gd" id="1_677q7"]
+[ext_resource type="Texture2D" uid="uid://jrva1r2b6d5i" path="res://assets/buildings/uspenskiy_sobor.png" id="2_bq2vn"]
+[ext_resource type="FontFile" uid="uid://cgxs06rba61ab" path="res://assets/fonts/pixel_font.ttf" id="3_4pepj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pepj"]
+size = Vector2(98, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cy7dt"]
+size = Vector2(31.908918, 9.00032)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbl21"]
+size = Vector2(47.5, 33.25)
+
+[node name="dormition_cathedral" type="StaticBody2D"]
+script = ExtResource("1_677q7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bq2vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13, 39)
+shape = SubResource("RectangleShape2D_4pepj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(47.79618, 51.218864)
+rotation = -0.46845132
+shape = SubResource("RectangleShape2D_cy7dt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(39, 32.625)
+shape = SubResource("RectangleShape2D_hbl21")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -109.0
+offset_top = -48.0
+offset_right = 115.0
+offset_bottom = -25.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_4pepj")
+theme_override_font_sizes/font_size = 8
+text = "ЛКМ чтобы совершить венчание"
