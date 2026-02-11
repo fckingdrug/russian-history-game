@@ -54,7 +54,7 @@ func _input(event):
 			if ui and ui.has_method("display_menu"):
 				var player = get_tree().get_first_node_in_group("player")
 				if player and GOALS.has(player.current_era):
-					var note = GOALS[player.current_era].detail
+					var note = GOALS[player.current_era].details
 					var full_text = "=== ИСТОРИЧЕСКАЯ ПАМЯТКА ===\n\n" + note
 					ui.display_menu(full_text, true)
 
